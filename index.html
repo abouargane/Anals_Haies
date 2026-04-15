@@ -3687,8 +3687,8 @@ function downloadTemplate(fmt) {
     { h: 'Amplitude IR',   ex1: 2.47,               ex2: 2.25,             note: 'Amplitude totale = D-Imp + D-Réc (m)' },
   ];
 
-  // Métadonnées communes
-  const sit  = sitForGender(s.genre);  // Situation adaptée au genre de l'étudiant
+  // Métadonnées communes (template = contexte général, pas un étudiant spécifique)
+  const sit  = currentSituationM;  // Situation garçons par défaut pour le template
   const tdate = new Date().toLocaleDateString('fr-FR');
   const tg    = currentGroupe      || '(non renseigné)';
   const tinst = currentInstitution || '(non renseignée)';
